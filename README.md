@@ -85,3 +85,7 @@ flask --app hello run --host=0.0.0.0 --debug
 ### [Flask](https://palletsprojects.com/p/flask/)
 
 ### [FastAPI](https://fastapi.tiangolo.com/)
+
+# Tutorials
+[Python Web Application Development (6h)](https://youtu.be/Qr4QMBUPxWo)
+[Learn Flask for Python (1h)](https://youtu.be/Z1RJmh_OqeA)
