@@ -65,17 +65,20 @@ pip install Flask
 # Deactivate the environment
 deactivate
 ```
+Check version Flask
+```shell
+flask --version
+```
 
 ### Run program
 
 ```shell
-flask --app hello run
+py app.py
 
-# Externally Visible Server
-flask --app hello run --host=0.0.0.0
+```
 
-# To enable debug mode, use the --debug option.
-flask --app hello run --host=0.0.0.0 --debug
+```shell
+flask --app app run --host=0.0.0.0 --port=80 --debug --reload
 ```
 
 # Documentation
