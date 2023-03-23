@@ -24,7 +24,6 @@ git remote add bitbucket git@bitbucket.org:hainghia/flask.git
 git add .; git commit -asm "Initial commit";git push origin main; git push gitlab main; git push bitbucket main
 ```
 
-
 ## Install python and Pip (PowerShell administrator)
 
 ```shell
@@ -43,6 +42,7 @@ pip install -r requirements.txt
 ```
 
 ## How To Install Python 3 and Set Up a Programming Environment on an Ubuntu 20.04
+
 ```shell
 sudo apt update
 sudo apt -y upgrade
@@ -65,7 +65,9 @@ pip install Flask
 # Deactivate the environment
 deactivate
 ```
+
 Check version Flask
+
 ```shell
 flask --version
 ```
@@ -78,7 +80,8 @@ py app.py
 ```
 
 ```shell
-flask --app app run --host=0.0.0.0 --port=80 --debug --reload
+flask --app flaskr run --host=0.0.0.0 --port=80 --debug --reload
+
 ```
 
 # Documentation
@@ -90,6 +93,7 @@ flask --app app run --host=0.0.0.0 --port=80 --debug --reload
 ### [FastAPI](https://fastapi.tiangolo.com/)
 
 # [Project layout](https://flask.palletsprojects.com/en/2.2.x/tutorial/layout/)
+
 ```
 /home/user/Projects/flask-tutorial
 ├── flaskr/
