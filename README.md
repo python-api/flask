@@ -83,6 +83,12 @@ py app.py
 flask --app flaskr init-db
 flask --app flaskr run --host=0.0.0.0 --port=80 --debug --reload
 
+pytest
+pytest -v
+coverage run -m pytest
+coverage report
+coverage html
+
 
 ```
 
