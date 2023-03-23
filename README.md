@@ -89,6 +89,34 @@ flask --app app run --host=0.0.0.0 --port=80 --debug --reload
 
 ### [FastAPI](https://fastapi.tiangolo.com/)
 
-# Tutorials
-[Python Web Application Development (6h)](https://youtu.be/Qr4QMBUPxWo)
-[Learn Flask for Python (1h)](https://youtu.be/Z1RJmh_OqeA)
+# [Project layout](https://flask.palletsprojects.com/en/2.2.x/tutorial/layout/)
+```
+/home/user/Projects/flask-tutorial
+├── flaskr/
+│   ├── __init__.py
+│   ├── db.py
+│   ├── schema.sql
+│   ├── auth.py
+│   ├── blog.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── auth/
+│   │   │   ├── login.html
+│   │   │   └── register.html
+│   │   └── blog/
+│   │       ├── create.html
+│   │       ├── index.html
+│   │       └── update.html
+│   └── static/
+│       └── style.css
+├── tests/
+│   ├── conftest.py
+│   ├── data.sql
+│   ├── test_factory.py
+│   ├── test_db.py
+│   ├── test_auth.py
+│   └── test_blog.py
+├── venv/
+├── setup.py
+└── MANIFEST.in
+```
