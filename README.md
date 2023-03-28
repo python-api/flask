@@ -80,8 +80,8 @@ py app.py
 ```
 
 ```shell
-flask --app flaskr init-db
-flask --app flaskr run --host=0.0.0.0 --port=80 --debug --reload
+flask --app app init-db
+flask --app app run --host=0.0.0.0 --port=80 --debug --reload
 
 pytest
 pytest -v
