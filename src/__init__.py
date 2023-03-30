@@ -6,16 +6,14 @@ from src.app.questions import questions
 from src.config import Config
 from src.extensions import Extension, database
 
-extensions = Extension()
+extensions = Extension()d
 
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
-    print(app.config)
 
     # Initialize Flask extensions here
     database.init_app(app)
-
 
     # Register blueprints here
 
