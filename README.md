@@ -150,4 +150,23 @@ make stop-user-production; make build-user-production; make start-user-productio
 ```
 
 https://docs.docker.com/samples/flask/
-https://www.sqlalchemy.org/
+
+
+# [SQL Alchemy](https://www.sqlalchemy.org/)
+## [SQL Alchemy Core](https://docs.sqlalchemy.org/en/20/core/index.html)
+Database URLs
+```shell
+dialect+driver://username:password@host:port/database
+```
+The MySQL dialect uses mysqlclient as the default DBAPI. There are other MySQL DBAPIs available, including PyMySQL:
+
+```shell
+# default
+engine = create_engine("mysql://scott:tiger@localhost/foo")
+
+# mysqlclient (a maintained fork of MySQL-Python)
+engine = create_engine("mysql+mysqldb://scott:tiger@localhost/foo")
+
+# PyMySQL
+engine = create_engine("mysql+pymysql://scott:tiger@localhost/foo")
+```
