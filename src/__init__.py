@@ -6,7 +6,7 @@ from src.app.questions import questions
 from src.config import Config
 from src.extensions import Extension, database
 
-extensions = Extension()d
+extensions = Extension()
 
 def create_app():
     app = Flask(__name__)
