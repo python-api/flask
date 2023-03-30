@@ -1,12 +1,3 @@
-Flask~=2.2.3
-flask-marshmallow~=0.14.0
-Flask-Migrate==4.0.4
-Flask-Script==2.0.6
-Flask-SQLAlchemy
-marshmallow==3.19.0
-marshmallow-sqlalchemy==0.29.0
-SQLAlchemy==2.0.7
-click~=8.1.3
-Werkzeug~=2.2.3
-pytest~=7.2.2
-setuptools~=67.6.0
+Flask==2.2.3
+python-dotenv==1.0.0
+SQLAlchemy
