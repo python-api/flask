@@ -3,3 +3,4 @@ python-dotenv==1.0.0
 SQLAlchemy==2.0.7
 Flask-SQLAlchemy==3.0.3
 mysqlclient==2.1.1
+Flask-Migrate==4.0.4
