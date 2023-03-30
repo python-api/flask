@@ -10,7 +10,7 @@ def create_app(config_class=Config):
     # Initialize Flask extensions here
     # Register blueprints here
 
-    @app.route('/test/')
+    @app.route('/')
     def test_page():
         return '<h1>Testing the Flask Application Factory Pattern</h1>'
 
