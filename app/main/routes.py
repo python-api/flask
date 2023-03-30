@@ -1,6 +1,8 @@
-from app.main import blue_print
+from flask import render_template
+
+from app.main import main
 
 
-@blue_print.route('/')
+@main.route('/')
 def index():
-    return 'This is The Main Blueprint'
+    return render_template('index.html')

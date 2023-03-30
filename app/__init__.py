@@ -1,4 +1,8 @@
 from flask import Flask
+
+from app.main import main
+from app.posts import posts
+from app.questions import questions
 from config import Config
 
 
@@ -9,8 +13,9 @@ def create_app(config_class=Config):
     # Initialize Flask extensions here
     # Register blueprints here
 
-    from app.main import blue_print
-    app.register_blueprint(blue_print)
+    app.register_blueprint(main)
+    app.register_blueprint(posts, url_prefix='/posts/')
+    app.register_blueprint(questions, url_prefix='/questions/')
 
     @app.route('/test/')
     def test_page():
