@@ -188,4 +188,20 @@ export FLASK_ENV=development
 flask shell -c "print(app.config)"
 ```
 
+## [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/index.html)
+```shell
+flask db init
+```
+
+
+
+
+
+
+
+
+
+
+
+
 https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy

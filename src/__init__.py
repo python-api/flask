@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_migrate import Migrate
 
 from src.app.main import main
 from src.app.posts import posts
@@ -14,6 +15,7 @@ def create_app():
 
     # Initialize Flask extensions here
     database.init_app(app)
+    migrate = Migrate(app, database)
 
     # Register blueprints here
 
