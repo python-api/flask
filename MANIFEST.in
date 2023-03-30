@@ -1,4 +1,4 @@
-include app/schema.sql
-graft app/static
-graft app/templates
+include src/schema.sql
+graft src/static
+graft src/templates
 global-exclude *.pyc

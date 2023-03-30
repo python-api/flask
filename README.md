@@ -170,3 +170,20 @@ engine = create_engine("mysql+mysqldb://scott:tiger@localhost/foo")
 # PyMySQL
 engine = create_engine("mysql+pymysql://scott:tiger@localhost/foo")
 ```
+
+## [Flask Command Line Interface](https://flask.palletsprojects.com/en/2.2.x/cli/)
+
+Show config Project
+```shell
+flask shell
+
+# Then exec to Terminal
+print(app.config)
+```
+
+```shell
+export FLASK_APP=src
+export FLASK_ENV=development
+
+flask shell -c "print(app.config)"
+```
