@@ -202,4 +202,13 @@ flask shell -c "print(app.config)"
 flask db init
 ```
 
+
+
+# Mysql
+```shell
+drop database `flask`; create database `flask`;
+
+SET foreign_key_checks = 0;TRUNCATE symons_coupon.templates; SET foreign_key_checks = 1;
+```
+
 https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy

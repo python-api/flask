@@ -17,6 +17,7 @@ def create_app():
     # Initialize Flask extensions here
     database.init_app(app)
     migrate = Migrate(app, database)
+    from src.app.models import models
 
     # Register blueprints here
 
@@ -29,6 +30,3 @@ def create_app():
         return '<h1>Testing the Flask Application Factory Pattern</h1>'
 
     return app
-
-
-from src.app.models import models
