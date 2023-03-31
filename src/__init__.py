@@ -9,6 +9,7 @@ from src.extensions import Extension, database
 
 extensions = Extension()
 
+
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
@@ -28,3 +29,6 @@ def create_app():
         return '<h1>Testing the Flask Application Factory Pattern</h1>'
 
     return app
+
+
+from src.app.models import models
