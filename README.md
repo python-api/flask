@@ -132,6 +132,7 @@ coverage html
 ├── setup.py
 └── MANIFEST.in
 ```
+
 ___
 
 ### [Apache Kafka](https://kafka.apache.org/quickstart)
@@ -151,13 +152,16 @@ make stop-user-production; make build-user-production; make start-user-productio
 
 https://docs.docker.com/samples/flask/
 
-
 # [SQL Alchemy](https://www.sqlalchemy.org/)
+
 ## [SQL Alchemy Core](https://docs.sqlalchemy.org/en/20/core/index.html)
+
 Database URLs
+
 ```shell
 dialect+driver://username:password@host:port/database
 ```
+
 The MySQL dialect uses mysqlclient as the default DBAPI. There are other MySQL DBAPIs available, including PyMySQL:
 
 ```shell
@@ -174,6 +178,7 @@ engine = create_engine("mysql+pymysql://scott:tiger@localhost/foo")
 ## [Flask Command Line Interface](https://flask.palletsprojects.com/en/2.2.x/cli/)
 
 Show config Project
+
 ```shell
 flask shell
 
@@ -189,19 +194,12 @@ flask shell -c "print(app.config)"
 ```
 
 ## [Flask-Migrate](https://flask-migrate.readthedocs.io/en/latest/index.html)
+
+- [Hướng dẫn tạo tập tin Migrate](https://alembic.sqlalchemy.org/en/latest/tutorial.html#create-a-migration-script)
+- [Các Xây dựng cơ sở dữ liệu từ đầu](https://alembic.sqlalchemy.org/en/latest/cookbook.html#building-uptodate)
+
 ```shell
 flask db init
 ```
-
-
-
-
-
-
-
-
-
-
-
 
 https://www.digitalocean.com/community/tutorials/how-to-structure-a-large-flask-application-with-flask-blueprints-and-flask-sqlalchemy
