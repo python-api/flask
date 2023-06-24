@@ -6,4 +6,6 @@ class CampaignImpressionService:
         self.campaign_impression_repository = CampaignImpressionRepository()
 
     def list_campaign_impression(self):
-        return self.campaign_impression_repository.get_all()
+        return self.campaign_impression_repository.get_all(
+            columns=['id', 'advertiser_id', 'campaign_uuid']
+        )

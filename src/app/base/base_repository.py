@@ -24,6 +24,5 @@ class BaseRepository:
         return (db.session
             .query(*load_columns)
             .filter(*conditions)
-            .options(load_only(*columns))
             .all()
         )
