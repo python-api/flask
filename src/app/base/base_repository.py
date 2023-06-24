@@ -1,6 +1,6 @@
 from sqlalchemy.orm import load_only
 
-from src import database
+from src import database, db
 
 
 class BaseRepository:

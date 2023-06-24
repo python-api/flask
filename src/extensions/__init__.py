@@ -1,5 +1,8 @@
 from flask import Blueprint
-from src.extensions.sqlalchemy import database
+
+from src.extensions.marshmallow import marshmallow
+from src.extensions.sqlalchemy import db
+
 extensions = Blueprint('extensions', __name__)
 
 
