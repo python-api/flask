@@ -72,6 +72,33 @@ Check version Flask
 flask --version
 ```
 
+## Install Poetry
+
+```shell
+curl -sSL https://install.python-poetry.org | python3 -
+# of on MacOS
+brew install poetry
+
+poetry self update
+```
+
+## Install command reads the pyproject.toml file from the current project
+
+```shell
+# Set Up a Programming Environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install Package
+poetry install
+
+# Show command to view all installed dependencies
+poetry show --tree  --outdated
+
+# Deactivate the environment
+deactivate
+```
+
 ### Run program
 
 ```shell

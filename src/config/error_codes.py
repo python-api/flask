@@ -1,0 +1,67 @@
+
+import enum
+
+
+class ErrorCode(enum.Enum):
+
+    ###################### Status 400 ############################
+    # COMMON
+    INVALID = 'c_c00'
+    REQUIRED = 'c_c01'
+    REQUIRED_PRIMARY_EVENT = 'c_c01_02'
+    EXISTED = 'c_c09'
+    NOT_FOUND = 'c_c07'
+    DUPLICATE_VALUE = 'c_c10'
+
+    # FORMAT
+
+    INVALID_URL_PHONE_EMAIL_FORMAT = 'c_c08_01'
+    INVALID_DATE_FORMAT = 'c_c08_02'
+    INVALID_ONLY_NUMBER = 'c_c05_03'
+    INVALID_BUDGET_ORDER = 'C_07_08'
+
+    # FIELD
+    KEY_NOT_EXIST = 'c_c00_01'
+    INVALID_ONLY_NUMBER_OR_SPECIAL_CHARACTER = 'c_c05_04'
+    INVALID_UPPERCASE = 'c_c05_01'
+    INVALID_EMOJI = 'c_c05_02'
+
+    # FILE
+    FORMAT_FILE_UPLOAD = 'c_c02'
+
+    # LENGTH
+    INVALID_LENGTH_OUT_RANGE = 'c_c06_01'
+    INVALID_LENGTH_GREATER_MIN = 'c_c06_02'
+    INVALID_LENGTH_LESS_MAX = 'c_c06_03'
+    INVALID_LENGTH_DECIMAL = 'c_c06_04'
+
+    # VALUE
+    INVALID_VALUE_OUT_RANGE = 'c_c07_01'
+    INVALID_VALUE_GREATER_MIN = 'c_c07_02'
+    INVALID_VALUE_LESS_MAX = 'c_c07_03'
+
+    # COUNT
+    INVALID_COUNT_OUT_RANGE = 'c_c07_04'
+    INVALID_COUNT_GREATER_MIN = 'c_c07_05'
+    INVALID_COUNT_LESS_MAX = 'c_c07_06'
+
+    # CAMPARE TWO FIELD
+    INVALID_FIELD_1_GREATER_FIELD_2 = 'c_c11_01'
+    INVALID_FIELD_1_LESS_FIELD_2 = 'c_c11_02'
+    INVALID_FIELD_1_GREATER_OR_EQUAL_FIELD_2 = 'c_c11_03'
+    INVALID_FIELD_1_LESS_OR_EQUAL_FIELD_2 = 'c_c11_01'
+    INVALID_START_DATE_MUST_BETWEEN_TODAY_END_DATE = 'c_c11_06'
+    INVALID_END_DATE_MUST_LATER_THAN_START_DATE = 'c_c11_07'
+    INVALID_END_DATE_MUST_LATER_OR_EQUAL_THAN_TODAY = 'c_c11_09'
+
+    # COMPARE IN A LIST
+    TIME_SEGMENT_OVERLAP = 'c_c10_1'
+
+    ###################### OTHER COMMON STATUS CODE(500, 501...) ############################
+    INTERNAL_SERVER_ERROR = 'C500'
+
+    # OFFER GROUP
+    INVALID_MAXIMUM_OFFERS = 'c_c07_10'
+
+    def message(self):
+        return self.value
