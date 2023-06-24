@@ -8,10 +8,9 @@ from flask import request, g as this_request
 from marshmallow import ValidationError
 from werkzeug.exceptions import NotFound, BadRequest, Unauthorized
 
-
+from src import database
 from src.config.constants import *
 from src.config.error_codes import ErrorCode
-from src.database import db
 from src.helpers import MakeResponse
 
 # Create log
@@ -33,18 +32,18 @@ class ExceptionHandler:
             try:
                 return function(*args)
             except ValidationError as validation_err:
-                db.session.rollback()
+                database.session.rollback()
                 return self.make_response.failure(validation_err.messages), 400
             except BadRequest as ex:
-                db.session.rollback()
+                database.session.rollback()
                 return self.make_response.failure(ex.description), 400
             except NotFound as ex:
-                db.session.rollback()
+                database.session.rollback()
                 return self.make_response.failure(ex.description), 404
             except Exception as ex:
                 logger.error(ex, exc_info=True)
                 sendMessageToSlack(msg=str(ex))
-                db.session.rollback()
+                database.session.rollback()
                 env = os.getenv('APP_SETTINGS')
                 if env == 'DEV' or env == 'LOCAL':
                     return self.make_response.failure({'unknown': ex.args}), 500

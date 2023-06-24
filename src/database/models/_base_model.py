@@ -1,9 +1,7 @@
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer
 
-from src import database
-
-
-class BaseModel(database.Model):
+class BaseModel(extension.database.Model):
     __abstract__ = True
     id = Column(Integer, primary_key=True, nullable=False)
 
