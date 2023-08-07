@@ -11,3 +11,7 @@ class BaseModel(db.Model):
     def from_json(cls, json):
         data = {k: v for k, v in json.items() if hasattr(cls, k)}
         return cls(**data)
+
+
+class BaseMysqlModel(BaseModel):
+    __table_args__ = {'schema': 'mysql'}
